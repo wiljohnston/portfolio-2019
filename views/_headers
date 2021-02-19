@@ -1,0 +1,4 @@
+# a path:
+projects/robothouse-funhouse/index.html
+  # headers for that path:
+  X-Frame-Options: "ALLOW-FROM https://wjohnston.dev"
