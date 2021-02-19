@@ -1,0 +1,219 @@
+<head>
+  <title>
+    William Johnston | Portfolio
+  </title>
+  <link rel="stylesheet" href="/main.css" />
+  <script type="text/javascript" src="/main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Roboto+Slab&display=swap" rel="stylesheet" />
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+</head>
+
+<body>
+  <div id="main-wrapper">
+    <div class="header">
+      <div class="heading">
+        <div class="filter-button">
+          <a style="text-decoration: underline; text-underline-position: under;" href="/projects" target="_self">
+            <h2>projects</h2>
+          </a>
+        </div>
+        <div class="filter-button">
+          <a style="text-decoration: underline; text-underline-position: under;" href="/about" target="_self">
+            <h2>about me</h2>
+          </a>
+        </div>
+      </div>
+
+
+      <div id="filters" class="responsive-col responsive-wider">
+        <!-- NOTE: all items need to have a category somewhere on this list or they'll show up in all categories -->
+        <div>
+          <span style='font-family: " Courier Prime", monospace; margin-right: 1rem;'>filters:</span>
+          <button class="filter-button" onclick="selectAllCategories()">
+            show all<span class="filter-cross">x</span>
+          </button>
+        </div>
+        <div>
+          <!-- make sure the second listedclass is the category -->
+          <button class="filter-button web" onclick="filterAndUpdate('web')">
+            web<span class="filter-cross web">x</span>
+          </button>
+          <button class="filter-button art" onclick="filterAndUpdate('art')">
+            art<span class="filter-cross art">x</span>
+          </button>
+          <button class="filter-button threeD" onclick="filterAndUpdate('threeD')">
+            3d<span class="filter-cross threeD">x</span>
+          </button>
+
+        </div>
+        <div>
+          <button class="filter-button mobile" onclick="filterAndUpdate('mobile')">
+            mobile<span class="filter-cross mobile">x</span>
+          </button>
+          <button class="filter-button ml" onclick="filterAndUpdate('ml')">
+            ml<span class="filter-cross ml">x</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="feed" class="responsive-wider">
+      <div class="item pink web art visible"
+        onclick="openAndPlay('lovebotcity-modal', 'lovebotcity-iframe', 'https://kalana.io/city')">
+        <p>love bot city</p>
+        <div class="category-list">
+          <p><strong>tags</strong>: web, art, node.js</p>
+        </div>
+        <div class="item-description">
+          <p>
+            a visual simulation of Italian city generation, powered by growth of a population in a limited space.
+          </p>
+        </div>
+        <div>
+          <p class="item-description"><strong>collaboration</strong>: Jonathan Vrankul, Kalana Vithana, Sebastian
+            Bailouni</p>
+        </div>
+      </div>
+      <div class="item pink mobile visible" onclick="openModal('pocket-modal')">
+        <p>pocket</p>
+        <div class="category-list">
+          <p><strong>tags</strong>: mobile, react-native</p>
+        </div>
+        <div class="item-description">
+          <p>
+            a budgeting app, built with react native in 24 hours at the 2019
+            <a class="emphasised darkslategray" href="https://accenture.com">accenture</a> hackathon. <br />🍻1st
+            place! 🍻
+          </p>
+        </div>
+        <div>
+          <p class="item-description"><strong>collaboration</strong>: Jonathan Vrankul, Daniel Wen, Sebastian Bailouni
+          </p>
+        </div>
+      </div>
+      <div class="item pink web art threeD visible" onclick="openModal('robothouse-modal')">
+        <p>robot house fun-house</p>
+        <div class="category-list">
+          <p><strong>tags</strong>: web, 3d, art, three.js, node.js</p>
+        </div>
+        <div class="item-description">
+          <p>
+            a 3d virtual tour of a robotic party-house, built to showcase my band, <a target="_blank"
+              class="emphasised darkslategray" href="http://robothouse.club">robot house time travel music</a>.
+          </p>
+        </div>
+        <div>
+          <p class="item-description"><strong>collaboration</strong>: Aeden Staats</p>
+        </div>
+      </div>
+
+      <div class="item pink ml visible" onclick="openModal('wine-modal')">
+        <p>robot wine connoisseur</p>
+        <div class="category-list">
+          <p><strong>tags</strong>: machine learning, python, keras, tensorflow</p>
+        </div>
+        <div class="item-description">
+          <p>
+            yes, a robot wine connoisseur. After laughing at the blabberings of wine label descriptions, I thought
+            it'd be fun to train a model to
+            write them.
+          </p>
+        </div>
+      </div>
+
+      <div class="item pink web visible" onclick="openModal('m189-modal')">
+        <p>monitor189</p>
+        <div class="category-list">
+          <p><strong>tags</strong>: web, node.js</p>
+        </div>
+        <div class="item-description">
+          <p>
+            a web-scraper and mailing list for visa regulations, born out of the <a class="emphasised darkslategray"
+              href="https://www.monash.edu/leavenoonebehind">leave no one behind</a> social entrepreneurship program.
+          </p>
+        </div>
+        <div>
+          <p class="item-description"><strong>collaboration</strong>: Alina Neuburger</p>
+        </div>
+      </div>
+
+      <a href="http://robothouse.club">
+        <div class="item pink web visible">
+          <p>robothouse neoblork collective</p>
+          <div class="category-list">
+            <p><strong>tags</strong>: web, php, wordpress</p>
+          </div>
+          <div class="item-description">
+            <p>
+              my first website - an altered wordpress community theme displaying information about my band of robots
+              from
+              the future, the robot house neoblork collective.
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+  <!-- END OF FEED -->
+
+  <div class="footer">
+  </div>
+
+  <div class="modal start-closed" id="lovebotcity-modal">
+    <h1 class="close-button soft-hover" onclick="closeAndRemoveiframe('lovebotcity-modal', 'lovebotcity-iframe')">×
+    </h1>
+    <div class="item-modal-content">
+      <iframe class="window border-lav big-thing" src="/loading-screen"></iframe>
+    </div>
+  </div>
+  <div class="modal start-closed" id="wine-modal">
+    <h1 class="close-button soft-hover" onclick="closeModal('wine-modal')">×</h1>
+    <div class="item-modal-content">
+      <iframe class="window border-lav big-thing" src="/projects/wine"></iframe>
+    </div>
+  </div>
+  <div class="modal start-closed" id="robothouse-modal">
+    <h1 class="close-button soft-hover" onclick="closeModal('robothouse-modal')">×</h1>
+    <div class="item-modal-content">
+      <iframe class="window border-lav big-thing" src="/projects/robothouse-funhouse"></iframe>
+    </div>
+  </div>
+
+  <div class="modal start-closed" id="m189-modal">
+    <h1 class="close-button soft-hover" onclick="closeModal('m189-modal')">×</h1>
+    <div class="item-modal-content">
+      <iframe class="window border-lav big-thing" src="https://monitor189.com"></iframe>
+    </div>
+  </div>
+  <div class="modal start-closed" id="pocket-modal">
+    <h1 class="close-button soft-hover" onclick="closeModal('pocket-modal')">×</h1>
+    <div class="item-modal-content responsive-col">
+      <div class="text-box responsive-wider responsive-hide">
+        <h1>Pocket</h1>
+        <p>to align with the 2019 <a class="emphasised darkslategray" href="https://accenture.com">accenture</a>
+          hackathon theme, banking revolution, we developed a banking
+          app with a focus on UX. Pocket uses spend categorisation to let users create virtual bank accounts that are
+          assigned to specific
+          spend categories. Users can then apply spending limits to these vitual accounts. </p>
+        <p>it was a lot of fun building the app under huge time pressure (24 hours), and we had even more fun
+          presenting
+          it. We were able to win over the judges and take out first place - a delightfully exciting way to close a
+          massive weekend.
+        </p>
+      </div>
+      <div class="window border-lav">
+        <video autoplay muted loop playsinline id="pocket-vid" autoplay="autoplay" loop="loop" muted="muted">
+          <source src="/media/pocket-vid-crop.mp4" type="video/mp4" />
+          <p>😭😭Your browser does not support the demo video format (.mp4)😭😭</p>
+        </video>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <!-- END OF MAIN WRAPPER -->
+
+</body>

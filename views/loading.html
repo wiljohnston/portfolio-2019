@@ -1,0 +1,47 @@
+<head>
+  <link rel="stylesheet" href="/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Roboto+Slab&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <script type="text/javascript">
+    function updateDots() {
+      let dots = document.getElementById("dots");
+      let current = dots.innerText;
+      let map = {
+        "o-\n--": "-o\n--",
+        "-o\n--": "--\n-o",
+        "--\n-o": "--\no-",
+        "--\no-": "o-\n--",
+        "": "o-\n--"
+      }
+      let newDots = map[current];
+      dots.innerText = newDots;
+    }
+  </script>
+  <style>
+    .mid-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      align-self: center;
+      font-size: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mid-wrap">
+    <div style="width: 24rem; text-align: center;">
+      <h3 style="font-size: small;"><span id="dots"></span></h3>
+      <!-- <p>Loading</p> -->
+    </div>
+    <script type="text/javascript">
+      window.setInterval(updateDots, 100);
+    </script>
+  </div>
+</body>

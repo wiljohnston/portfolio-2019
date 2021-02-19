@@ -1,0 +1,242 @@
+body {
+  font-size: 16px;
+}
+input,
+select {
+  font-size: 100%;
+}
+/* ^^ fixes form zooming on iphone */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  display: inline-flex;
+  flex-direction: row;
+  position: absolute;
+  max-width: 700px;
+  height: 80%;
+  align-self: center;
+  border: black;
+  border-style: double;
+  border-width: 6px;
+}
+
+.header {
+  text-align: center;
+  /* max-height: 12%; */
+  padding: 0.5rem;
+  /* max-width: 700px; */
+}
+
+h1 {
+  margin: 1rem;
+  font-family: "Girassol", cursive;
+}
+
+.label-text p {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#main-canvas {
+  width: 40%;
+  height: 60%;
+  margin: 15% 5% 5% 5%;
+  text-align: center;
+}
+
+.text-input {
+  width: 7rem;
+  font-family: "Girassol", cursive;
+  border: none;
+  font-weight: 200;
+  resize: none;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+.cool-button {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* .button-wrapper {
+  margin-top: 2rem;
+  font-family: "Courier Prime", monospace;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: none;
+} */
+
+/* button {
+  
+  align-self: center;
+  border-radius: 0;
+} */
+
+.button-wrapper {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 100%;
+  background-color: white;
+  border: none;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-family: "Dancing Script", cursive;
+  font-size: 0.8rem;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.right {
+  align-self: flex-end;
+  width: 50%;
+  height: 100%;
+}
+
+.form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+form {
+  position: relative;
+  top: 45%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-transparent {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.label {
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-self: flex-end;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  border-radius: 0.5rem;
+}
+
+.label-text {
+  position: absolute;
+  top: 0;
+  padding: 2rem;
+  left: 0;
+}
+
+.label-heading {
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+}
+.label-heading h1 {
+  font-size: 1.6rem;
+  margin: 1.5rem 0 0 0;
+}
+
+@media only screen and (max-width: 100vh) {
+  .body {
+    flex-direction: column;
+    height: 150%;
+    margin-block-end: 1rem;
+  }
+  .left {
+    width: 100%;
+    height: 50%;
+  }
+  .right {
+    width: 100%;
+    height: 50%;
+    align-self: center;
+  }
+  form {
+    top: 15%;
+  }
+  p {
+    font-size: 0.6rem;
+  }
+  .label-text {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+  .text-input {
+    margin-top: 4rem;
+  }
+  /* #wine-bottle-image {
+    transform: rotate(90deg);
+  }  */
+}

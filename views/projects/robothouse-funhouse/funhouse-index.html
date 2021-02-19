@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="funhouse-css.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+</head>
+
+<body>
+  <audio id="robot-party" src="./music/robot-party.mp3"></audio>
+  <audio id="molly" src="./music/molly.mp3"></audio>
+  <audio id="zap-sound" src="./music/zaps.mp3"></audio>
+  <audio id="click" src="./music/click.mp3"></audio>
+  <audio id="blip" src="./music/blip.mp3"></audio>
+  <audio id="navigation-sound" src="./music/navigate.mp3"></audio>
+  <audio id="laughter" loop src="./music/laughter-hiena.mp3"></audio>
+  <div id="wrapper">
+    <div id="intro">
+      <div class="text-box">
+        <p style="font-size: larger; font-weight: bold;">
+          Welcome to the Robot House fun-house.
+        </p>
+        <p>
+          This is a land of mechanical colour schemes, wacky movements and <strong>autoplay</strong> (WARNING) music by
+          Robot
+          House Time Travel Music. </p>
+        <p>
+          Look around & get those clackers clicking to scope the scene.
+        </p>
+        <div class="overlap-children">
+          <p id="loading-text">loading...</p>
+          <button id="entry-button" onclick="enterFunHouse()">
+            <p>enter the fun-house!</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="game-canvas">
+    </div>
+  </div>
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+h1,
+h2,
+p {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Courier Prime", monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: ivory;
+  position: relative;
+  max-width: 100%;
+}
+
+#main-wrapper {
+  overflow: scroll;
+  transition: all 1s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+#main-wrapper::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 999;
+  transition: all 1s ease-in-out;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+.in-front {
+  z-index: 9999;
+  position: absolute;
+}
+
+.item-modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2rem;
+  width: 90%;
+  height: 100%;
+}
+
+.item-modal-content .text-box {
+  max-width: 35%;
+  margin-right: 1rem;
+}
+
+.big-text-wrapper {
+  width: max-content;
+  margin-top: 8rem;
+  margin-left: 8rem;
+  font-size: 3rem;
+}
+
+.big-thing {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+}
+
+.start-closed {
+  height: 0;
+}
+
+#openingModal .modal-text-wrapper p {
+  color: #202020;
+}
+
+.emphasised {
+  font-weight: 300;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.emphasised:hover {
+  color: white;
+}
+
+.salmon {
+  color: salmon;
+}
+
+.salmon:hover {
+  background-color: salmon;
+}
+
+.darkslategray {
+  color: darkslategrey;
+}
+.darkslategray:hover {
+  background-color: sandybrown;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: fit-content;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 13.5rem;
+  justify-content: space-between;
+}
+
+#filters {
+  justify-content: center;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  display: flex;
+}
+
+.article-body {
+  width: 40%;
+  top: 1rem;
+  align-self: center;
+  line-height: 1.9rem;
+  position: relative;
+  margin-block-end: 3rem;
+}
+
+.article-body p {
+  /* font-family: "Courier Prime", monospace; what font to use??*/
+}
+
+hr {
+  border-style: solid;
+  border-width: 0.5px;
+  opacity: 0.6;
+}
+
+#feed {
+  width: 55%;
+  align-items: center;
+  position: relative;
+  align-self: center;
+  left: -1rem;
+}
+
+.category-list {
+  opacity: 0.6;
+  font-size: small;
+}
+
+.flex-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.visible {
+  opacity: 1;
+  /* transition: all 0.2s ease-in-out; */
+}
+
+.invisible {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  z-index: -9;
+  /* transition: all 0.2s ease-in-out; */
+}
+
+.item {
+  width: 40%;
+  min-height: 150px;
+  height: auto;
+  padding: 2%;
+  margin: 2.5%;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.behind {
+  z-index: -999;
+  position: absolute;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.wheat {
+  background-color: wheat;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item:hover {
+  box-shadow: 10px 10px #e2b2ed;
+  transform: scale(1.02);
+  /* transition: all 0.2s ease-in-out; */
+}
+
+.item:active {
+  box-shadow: none;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  transform: scale(1);
+}
+
+.item-description {
+  font-size: smaller;
+  opacity: 0.8;
+  line-height: 1.5rem;
+}
+
+iframe {
+  border-width: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.window {
+  align-self: center;
+  border-style: solid;
+  border-width: 1rem;
+}
+
+.border-lav {
+  border-color: lavenderblush;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+.filter-button {
+  background-color: transparent;
+  opacity: 0.7;
+  border: none;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Courier Prime", monospace;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-cross {
+  margin-left: 0.5rem;
+  opacity: 0;
+}
+
+.selected {
+  opacity: 1;
+}
+
+.filter-button:hover {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.call-to-action {
+  position: relative;
+  animation: drop-down-at-90 3.5s ease-in-out;
+  cursor: pointer;
+  width: min-content;
+}
+
+.drop-in {
+  position: relative;
+  margin: 0;
+  animation: drop-down-at-90 3.5s ease-in-out;
+}
+
+.close-button {
+  position: relative;
+  align-self: flex-end;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  z-index: 2;
+  margin: 0;
+  cursor: pointer;
+  width: min-content;
+}
+
+.soft-hover {
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  width: min-content;
+}
+
+.soft-hover:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+#pocket-vid {
+  width: 300px;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#fade1 {
+  animation: fadeIn1 4.2s;
+}
+#fade2 {
+  animation: fadeIn2 4.2s;
+}
+#fade3 {
+  animation: fadeIn3 4.2s;
+}
+#fade4 {
+  animation: fadeIn4 4.2s;
+}
+
+@keyframes drop-down-at-90 {
+  0% {
+    margin-top: -1rem;
+    opacity: 0;
+  }
+  90% {
+    margin-top: -1rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0rem;
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn4 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+.responsive-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .big-thing {
+    width: 92%;
+  }
+  .item {
+    width: 95%;
+    padding: 1rem;
+    margin-block-end: 2rem;
+  }
+  .responsive-wider {
+    max-width: none !important;
+    width: 85% !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .responsive-col {
+    flex-direction: column;
+  }
+  .responsive-hide {
+    visibility: hidden;
+    display: none;
+  }
+}

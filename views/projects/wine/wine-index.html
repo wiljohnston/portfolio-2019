@@ -1,0 +1,46 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Courier+Prime:400i|Girassol&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/projects/wine/styles/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+</head>
+
+<body>
+  <div class="header">
+    <h1>Robot Wine Connoisseur</h1>
+  </div>
+  <div class="body-wrapper">
+    <div class="body">
+      <div class="left">
+        <img src="/projects/wine/images/bottle.png" height="100%" alt="the bottle" id="wine-bottle-image" />
+        <div class="form">
+          <form action="describe" method="post" autocomplete="off">
+            <input class="text-input" type="text" name="name" placeholder="Wine name" style="padding-bottom: 2rem;"
+              required></textarea>
+            <br />
+            <div class="button-wrapper">
+              <button type="submit">
+                Generate description..
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="right">
+        <div class="label">
+          <img class="background-transparent" src="/projects/wine/images/lable-border.png" />
+          <div class="label-text">
+            <div class="label-heading">
+              <h1>
+                <%= name %>
+              </h1>
+            </div>
+            <p>
+              <%= review %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
